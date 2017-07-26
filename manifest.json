@@ -1,7 +1,7 @@
 {
 	"name": "NOTE RINSVENT",
 	"background": {
-		"scripts": [ "assets/js/jquery.js","assets/js/background.js", "oauth/chrome_ex_oauthsimple.js", "oauth/chrome_ex_oauth.js", "oauth/onload.js" ]
+		"scripts": [ "assets/js/jquery.js","assets/js/background.js", "oauth/chrome_ex_oauthsimple.js", "oauth/chrome_ex_oauth.js", "oauth/onload.js", "oauth/init.js" ]
 	},
 	"browser_action": {
 		"default_icon": {
@@ -41,7 +41,13 @@
 	},
 	"manifest_version": 2,
 	"options_page": "options.html",
-	"permissions": [ "tabs", "contextMenus" ],
+	"permissions": [
+		"tabs",
+		"contextMenus",
+		"https://www.google.com/accounts/OAuthGetRequestToken",
+		"https://www.google.com/accounts/OAuthAuthorizeToken",
+		"https://www.google.com/accounts/OAuthGetAccessToken"
+	],
 	"short_name": "Клиент сайта note.rinsvent.ru для простого поиска/добавления информации",
 	"version": "1.0.0"
 }
