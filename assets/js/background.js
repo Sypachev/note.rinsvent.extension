@@ -40,13 +40,3 @@ function getCookie(name) {
 chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
     console.log("dfas");
 });
-
-var oauth = ChromeExOAuth.initBackgroundPage({
-        'request_url': 'http://note.rinsvent.ru/login',
-    'authorize_url': 'http://note.rinsvent.ru/',
-    'access_url': 'http://note.rinsvent.ru/',
-    'consumer_key': 'anonymous',
-    'consumer_secret': 'anonymous',
-    'scope': 'http://note.rinsvent.ru/',
-    'app_name': 'Client for note.rinsvent.ru site'
-});
