@@ -30,7 +30,7 @@
 	},
 	"content_scripts": [ {
 		"all_frames": true,
-		"js": [ "assets/js/jquery.js", "assets/js/script.js" ],
+		"js": [ "assets/js/jquery.js", "assets/js/app.js", "assets/js/script.js" ],
 		"matches": [ "<all_urls>" ]
 	} ],
 	"default_locale": "ru",

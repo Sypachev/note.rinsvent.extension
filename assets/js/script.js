@@ -1,3 +1,4 @@
+'use strict';
 chrome.extension.sendMessage("22", function (a) {
     console.log(a);
     null == getCookie("site") && (document.cookie = "site=" + getCookieStr("site", a));
@@ -15,3 +16,8 @@ function getCookieStr(a, b) {
     0 < b.length && (e = b.indexOf(d), -1 != e && (e += d.length, f = b.indexOf(";", e), -1 == f && (f = b.length), c = unescape(b.substring(e, f))));
     return c;
 }
+
+$(function(){
+    let app = new App();
+    app.getNotes();
+});
