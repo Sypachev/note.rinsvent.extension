@@ -264,6 +264,7 @@ ChromeExOAuth.initCallbackPage = function() {
   var oauth_config = background_page.chromeExOAuthConfig;
   var oauth = ChromeExOAuth.fromConfig(oauth_config);
   background_page.chromeExOAuthRedirectStarted = true;
+
   oauth.initOAuthFlow(function (token, secret) {
     background_page.chromeExOAuthOnAuthorize(token, secret);
     background_page.chromeExOAuthRedirectStarted = false;
@@ -437,9 +438,10 @@ ChromeExOAuth.prototype.getTokenSecret = function() {
 ChromeExOAuth.prototype.initOAuthFlow = function(callback) {
   if (!this.hasToken()) {
     var params = ChromeExOAuth.getQueryStringParams();
+
     if (params['chromeexoauthcallback'] == 'true') {
       var oauth_token = params['oauth_token'];
-      var oauth_verifier = params['oauth_verifier']
+      var oauth_verifier = params['oauth_verifier'];
       this.getAccessToken(oauth_token, oauth_verifier, callback);
     } else {
       var request_params = {
