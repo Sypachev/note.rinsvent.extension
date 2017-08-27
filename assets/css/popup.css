@@ -2,3 +2,91 @@
     min-width: 300px;
     min-height: 300px;
 }
+.active, .container .header .header_item:hover, .container .header .header_item.active{
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.container .header{
+    height: 30px;
+}
+
+.container .header .header_item{
+    display: inline-block;
+    color: #337ab7;
+    text-decoration: none;
+    font-size: medium;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tab{
+    display: none;
+}
+
+.tab.active{
+    display: block;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 3px 5px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.tab.search input.query{
+    width: 235px;
+}
+
+.tab form{
+    margin-bottom: 10px;
+}
+
+#notes .note{
+    margin-bottom: 5px;
+    color: black;
+}
+#notes .title{
+    margin-bottom: 10px;
+}
+
+#notes .note .name{
+    font-size: 14px;
+}
+#notes .note .text{
+    font-size: 10px;
+}
+
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: #337ab7; /* Цвет линии для остальных браузеров */
+    background-color: #337ab7; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+}
+
+.tab.add input{
+    margin-bottom: 5px;
+}
+.tab.add textarea{
+    height: 250px;
+}
+.tab.add input,.tab.add textarea{
+    width: 100%;
+    box-sizing: border-box;
+}

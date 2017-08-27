@@ -8,6 +8,26 @@
     <link rel='stylesheet' href='assets/css/popup.css' type='text/css' media='all'/>
 </head>
 <body>
-<div class="container"></div>
+<div class="container">
+    <div class="header">
+        <div data-tab="search" class="header_item active">Поиск</div>
+        <div data-tab="add" class="header_item">Добавить</div>
+    </div>
+    <div class="body">
+        <div class="tab search active">
+            <form action="#">
+                <input name="query" class="query" type="text" />
+                <button class="btn btn-primary">Искать</button>
+            </form>
+        </div>
+        <div class="tab add">
+            <form action="#">
+                <input placeholder="Название" name="name" class="name" type="text" />
+                <textarea placeholder="Описание" name="text" class="text"></textarea>
+                <button class="btn btn-primary">Сохранить</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
